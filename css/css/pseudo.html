@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link
+        {
+            color: blue;
+        }
+        a:hover{
+            color:black;
+        }
+        a:visited
+        {
+            color: red;
+        }
+        li:hover{
+            color: pink;
+        }
+        li:not(:hover)
+        {
+            color: green;
+        }
+        li:nth-child(3)
+        {
+            color:brown ;
+        }
+        li
+        {
+            list-style:square;
+        }
+        div p
+        {
+            background-color: violet;
+            padding: 10px;
+            font-size: 20px;
+            display:none;
+        }
+        #a:hover p{
+            display: block;
+        } 
+    </style>
+</head>
+<body>
+    <a href="#">Hello</a>
+    <ul>
+        <li>Hello1</li>
+        <li>Hello2</li>
+        <li>Hello3</li>
+    </ul>
+    <div id="a">
+        Hover here
+        <p>Hello</p>
+    </div>
+</body>
+</html>

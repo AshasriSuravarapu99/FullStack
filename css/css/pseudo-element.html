@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::first-letter
+        {
+            font-size: 2em;
+            font-style: italic;
+        }
+        p::first-line
+        {
+            color: teal;
+        }
+        p::selection
+        {
+            color:tomato;
+            background-color: black;
+        }
+        #fruit li::before
+        {
+            content:"✔️";
+        }
+        #apple::after
+        {
+            content:"🍎";
+        } 
+        #orange::after
+        {
+            content:"🍊";
+        } 
+        #fruit li::marker
+        {
+            content:"😍";
+            cursor: cell;
+           
+        }
+
+        </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias at repudiandae ut ipsa commodi quo labore libero in, odit magnam tempora, voluptate doloremque? Deleniti tempora asperiores, accusamus in optio a.</p>
+    <ul id="fruit">
+        <li id="apple">Apple</li>
+        <li id="orange">Orange</li>
+    </ul>
+</body>
+</html>
+
+<!-- windows + ; is used to open emoji tab -->

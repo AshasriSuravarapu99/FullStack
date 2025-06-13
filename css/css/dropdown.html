@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button
+        {
+            border: none;
+            font-size: 20px;
+            padding: 10px 15px;
+            color: white;
+            background-color: silver;
+            cursor:pointer;
+
+        }
+       .a a
+       {
+         display: block;
+         text-decoration: none;
+         color: black;
+         font-size: 18px;
+         padding: 15px;
+        }
+       a:hover
+       {
+            color: white;
+            background-color: black;
+       }
+       .content
+       {
+           background-color: rgb(158, 162, 167);
+           position: absolute;
+           width: 150px;
+           display: none;
+
+       }
+       .a:hover .content
+       {
+           display: block;
+       }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <button>Select</button>
+        <div class="content">
+            <a href="#">Sam1</a>
+            <a href="#">Sam2</a>
+        </div>
+        
+    </div>
+</body>
+</html>
