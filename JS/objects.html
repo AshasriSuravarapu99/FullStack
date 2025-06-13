@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        const product = 
+        {
+        name:'socks',
+        price:'200'
+        }
+
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        // Reassinging the value
+        product.name='Shoes';
+        console.log(product);
+
+        //Adding new value
+        product.newValue = 'New value';
+        console.log(product);
+
+        //Deleting the value
+        delete product.name;
+        console.log(product);
+
+        console.log(product['delivery']);
+        console.log(product.delivery);
+
+        const product2 =
+        {
+              name:'socks',
+              price:100,
+              rating:{
+                stars:4.5,
+                count:87
+              },
+              fun: function function1()
+              {
+                 console.log("function inside object ")
+              }
+
+        }
+        console.log(product2);
+        console.log(product2.rating);
+        console.log(product2.rating.stars);
+        product2.fun();
+
+
+        console.log(typeof console);
+        console.log(typeof console.log);
+
+
+        // Built in JSON object
+        // it converts the product2 javascript object into JSON
+        // it return the data in String type
+        // Javascript object -> JSON
+        console.log(JSON.stringify(product2));
+
+        //JSON -> Javascript Object
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));
+
+        //localStorage object is used to store the values more permanently i.e example in rock paper scissors if we refresh the page we lose the score of the game but by using this obj we cannot lose the score.
+
+        // Syntax to store the value : localStorage.setItem(name,value)
+        // Syntax to get the value : localStorage.getItem(name)
+
+        // it always stores the strings only.
+
+        
+        // Auto Boxing : Automatically wraps the String into an object
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+        const object1 = {
+           message:'hello'
+        }
+        const object2 = object1;  // object2 references to the object1 reference
+
+        object1.message = 'Good morning';
+        console.log(object2.message);
+
+        const object3 = {
+           message:'hello'
+        }
+        console.log(object2 === object3);
+        console.log(object2 === object1);
+        
+       // Destructuring
+       // const message = object3.message;
+       const {message,price} = object3;
+       console.log(message);
+       console.log(price);
+
+       const object5 = {
+           //message : message
+           message,
+           method(){
+               console.log('Method');
+           }
+       }
+       console.log(object5);
+       object5.method();
+    
+   </script>
+</body>
+</html>
+
+
+<!-- Built in objects : 
+    1) in console.log() , console is a object and log() is the function that stored inside the console object.
+
+    2) Math.random() - Math is a object were as random() is a function stored in the Math object.
+
+    3) JSON: Javascript Object Notation . It is similar to javascript object but with less features.   
+    It only supports double quotes and it doesnt support functions in the object.
+     Eg : {
+        "name":"asha",
+        "rating":{
+           "count":10,
+           "stars":4.5
+        }
+     }
+    It is supported by multiple programming languages unlike javascript obect which supports only javascript . So it is more recommended.
+
+    Built-in JSON Object : It is used to convert Javascript object into JSON .
+
+-->
